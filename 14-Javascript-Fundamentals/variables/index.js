@@ -12,20 +12,20 @@
 
 // Swapping variables
 
-function test(){
-    var a = "3";
-    var b = "8";
+// function test(){
+//     var a = "3";
+//     var b = "8";
 
-    var c =a;
-    a=b;
-    b=c;
+//     var c =a;
+//     a=b;
+//     b=c;
 
-    console.log("a is " + a);
-    console.log("b is " + b);
+//     console.log("a is " + a);
+//     console.log("b is " + b);
     
-}
+// }
 
-test();
+// test();
 
 
 // var tweet = prompt("Express yourself! ");
@@ -47,8 +47,80 @@ test();
 // alert(9%6);
 // alert(3 + 5*2);
 
-var dogAge = prompt("What is your dog age?")
+// var dogAge = prompt("What is your dog age?")
 
-var humanAge = (dogAge - 2) *4 + 21;
+// var humanAge = (dogAge - 2) *4 + 21;
 
-alert("Your dog age in human age is " + humanAge)
+// alert("Your dog age in human age is " + humanAge)
+
+// Challenge
+
+// function getMilk(money){
+// console.log("leaveHouse");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveUp");
+//   console.log("moveRight");
+//   console.log("moveRight");
+//   console.log("Buy " + Math.floor(money / 1.5) + " bottles of Milk");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveDown");
+//   console.log("moveLeft");
+//   console.log("moveLeft");
+//   console.log("enterHouse");
+    
+// }
+// getMilk(5);
+
+// Challenge
+
+/*
+
+Life in Weeks Coding Exercise
+I was reading this article by Tim Urban - Your Life in Weeks and realised just how little time we actually have.
+
+In this challenge, you are going to create a function that tells us how many days, weeks and months we have left if we live until 90 years old.
+
+
+
+It will take your current age as the input and console.logs a message with our time left in this format:
+
+You have x days, y weeks, and z months left.
+
+Where x, y and z are replaced with the actual calculated numbers.
+
+
+
+For this challenge, assume there are 365 days in a year, 52 weeks in a year and 12 months in a year.
+
+
+
+IMPORTANT your console.log output should match the Example Output format exactly, even the positions of the commas and full stops.
+
+Example Input
+
+e.g. If you are 56 years old:
+
+lifeInWeeks(56)
+Example Output
+
+You have 12410 days, 1768 weeks, and 408 months left.
+*/
+
+function lifeInWeeks(age){
+    var remainingYears = 90 -age;
+    var days = remainingYears*365;
+    var weeks =  remainingYears * 52;
+    var months = remainingYears * 12;
+    
+    console.log(`You have ${days} days, ${weeks} weeks, and ${months} months left.`);
+}
+
+lifeInWeeks(56);
