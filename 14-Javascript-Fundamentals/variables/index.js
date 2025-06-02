@@ -22,7 +22,7 @@
 
 //     console.log("a is " + a);
 //     console.log("b is " + b);
-    
+
 // }
 
 // test();
@@ -75,7 +75,7 @@
 //   console.log("moveLeft");
 //   console.log("moveLeft");
 //   console.log("enterHouse");
-    
+
 // }
 // getMilk(5);
 
@@ -119,7 +119,7 @@ You have 12410 days, 1768 weeks, and 408 months left.
 //     var days = remainingYears*365;
 //     var weeks =  remainingYears * 52;
 //     var months = remainingYears * 12;
-    
+
 //     console.log(`You have ${days} days, ${weeks} weeks, and ${months} months left.`);
 // }
 
@@ -137,9 +137,9 @@ The first parameter should be the weight and the second should be the height.
 //Create your function below this line.
 //The first parameter should be the weight and the second should be the height.
 
-function bmiCalculator(weight, height){
-    return Math.round(weight/Math.pow(height,2));
-}
+// function bmiCalculator(weight, height){
+//     return Math.round(weight/Math.pow(height,2));
+// }
 
 
 /* If my weight is 65Kg and my height is 1.8m, I should be able to call your function like this:
@@ -150,5 +150,51 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 */
 
-var bmi = bmiCalculator(65, 1.8); 
-console.log(bmi);
+// var bmi = bmiCalculator(65, 1.8); 
+// console.log(bmi);
+
+
+// Random generate number 0 - 6
+
+// var n = Math.random();
+// n = n*6;
+// n= Math.floor(n) +1;
+// console.log(n);
+
+
+// Love calculator
+
+// var name1= prompt("Enter your name: ");
+// var name2 = prompt("Enter the name of your crush:");
+
+// var loveNumber = Math.floor(Math.random() * 100) +1;
+
+// alert(`The love score between ${name1} and ${name2} is ${loveNumber}%!`)
+
+
+function bmiCalculator(weight, height) {
+
+    var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
+    var interpretation = '';
+
+    if (bmi > 24.9) {
+        interpretation = `Your BMI is ${bmi}, so you are overweight.`;
+    } else if (bmi <= 24.9 && bmi > 18.5) {
+        interpretation = `Your BMI is ${bmi}, so you have a normal weight.`;
+    } else {
+        interpretation = `Your BMI is ${bmi}, so you are underweight.`;
+    }
+
+    return interpretation;
+}
+
+function isYearALeapYear(year) {
+    if (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)) {
+        return true;
+    }
+    return false;
+}
+
+var year = 2000;
+
+console.log(`${isYearALeapYear(year) ? "Yes" : "No"} leap year.`);
