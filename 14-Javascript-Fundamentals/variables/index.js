@@ -250,12 +250,45 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 
 // Challenge: The 99 Bottles Challenge
-function beer(){
-    var beers = 99;
-    while (beers>0) {
-        console.log(`${beers} ${beers ==1? "bottle": "bottles"} of beer on the wall, ${beers} ${beers ==1? "bottle": "bottles"} of beer. Take one down and pass it around, ${((--beers)===0? "No":beers)} ${beers ==1? "bottle": "bottles"} of beer on the wall.`)
-    }
-    console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
+// function beer(){
+//     var beers = 99;
+//     while (beers>0) {
+//         console.log(`${beers} ${beers ==1? "bottle": "bottles"} of beer on the wall, ${beers} ${beers ==1? "bottle": "bottles"} of beer. Take one down and pass it around, ${((--beers)===0? "No":beers)} ${beers ==1? "bottle": "bottles"} of beer on the wall.`)
+//     }
+//     console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
     
+// }
+// beer();
+
+
+// Fibonacci Challenge
+
+function fibonacciGenerator (n) {
+//Do NOT change any of the code above 👆
+    
+    //Write your code here:
+    
+
+    if (n === 1) {
+        return [0];
+    }else if (n === 2) {
+        return [0,1];
+    }
+    var res = [0,1]
+    for (let i = 2; i < n; i++) {
+        var item = res[i-2] + res[i-1]; 
+        res.push(item);
+        
+    }
+    return res;
+    
+    //Return an array of fibonacci numbers starting from 0.
+    
+//Do NOT change any of the code below 👇
 }
-beer();
+console.log(fibonacciGenerator(5));
+console.log(fibonacciGenerator(6));
+console.log(fibonacciGenerator(2));
+console.log(fibonacciGenerator(1));
+console.log(fibonacciGenerator(3));
+
