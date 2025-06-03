@@ -230,20 +230,32 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 // }
 // console.log(arr);
 
-function whosPaying(names) {
+// function whosPaying(names) {
     
-/******Don't change the code above*******/
+// /******Don't change the code above*******/
     
-    //Write your code here.
+//     //Write your code here.
     
-    var size = names.length;
-    var randName = Math.floor(Math.random()*size) +1;
+//     var size = names.length;
+//     var randName = Math.floor(Math.random()*size) +1;
     
-    return `${names[randName]} is going to buy lunch today!`
+//     return `${names[randName]} is going to buy lunch today!`
 
 
-/******Don't change the code below*******/    
+// /******Don't change the code below*******/    
+// }
+
+// var paying = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
+// console.log(paying);
+
+
+// Challenge: The 99 Bottles Challenge
+function beer(){
+    var beers = 99;
+    while (beers>0) {
+        console.log(`${beers} ${beers ==1? "bottle": "bottles"} of beer on the wall, ${beers} ${beers ==1? "bottle": "bottles"} of beer. Take one down and pass it around, ${((--beers)===0? "No":beers)} ${beers ==1? "bottle": "bottles"} of beer on the wall.`)
+    }
+    console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
+    
 }
-
-var paying = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
-console.log(paying);
+beer();
