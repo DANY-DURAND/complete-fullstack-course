@@ -199,12 +199,51 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 
 // console.log(`${isYearALeapYear(year) ? "Yes" : "No"} leap year.`);
 
-var names = ["Bernice", "Chouetta", "Kenny", "Dany", "Helene"];
+// var names = ["Bernice", "Chouetta", "Kenny", "Dany", "Helene"];
 
-var yourName = prompt("Enter your name:");
+// var yourName = prompt("Enter your name:");
 
-if (names.includes(yourName)) {
-    alert(`Welcome, ${yourName}!`);
-} else {
-    alert(`Hi! We couldn't find you in our list of invitees.`);
+// if (names.includes(yourName)) {
+//     alert(`Welcome, ${yourName}!`);
+// } else {
+//     alert(`Hi! We couldn't find you in our list of invitees.`);
+// }
+
+
+// FizzBuzz Challenge
+
+// var arr= [];
+
+// for (let i = 1; i < 101; i++){
+    
+//     if (i%3===0 && i%5 === 0) {
+//         // console.log(`FizzBuzz`);
+//      arr.push("FizzBuzz");
+//     }else if (i%3 ===0) {
+//         // console.log("Fizz");
+//      arr.push("Fizz");
+//     } else if (i%5 === 0) {
+//      arr.push("Buzz")
+//     }else{
+//      arr.push(i);
+//     } 
+// }
+// console.log(arr);
+
+function whosPaying(names) {
+    
+/******Don't change the code above*******/
+    
+    //Write your code here.
+    
+    var size = names.length;
+    var randName = Math.floor(Math.random()*size) +1;
+    
+    return `${names[randName]} is going to buy lunch today!`
+
+
+/******Don't change the code below*******/    
 }
+
+var paying = whosPaying(["Angela", "Ben", "Jenny", "Michael", "Chloe"]);
+console.log(paying);
