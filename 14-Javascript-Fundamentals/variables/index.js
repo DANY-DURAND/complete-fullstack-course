@@ -172,29 +172,39 @@ bmi should equal 20 when it's rounded to the nearest whole number.
 // alert(`The love score between ${name1} and ${name2} is ${loveNumber}%!`)
 
 
-function bmiCalculator(weight, height) {
+// function bmiCalculator(weight, height) {
 
-    var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
-    var interpretation = '';
+//     var bmi = Math.round((weight / Math.pow(height, 2)) * 10) / 10;
+//     var interpretation = '';
 
-    if (bmi > 24.9) {
-        interpretation = `Your BMI is ${bmi}, so you are overweight.`;
-    } else if (bmi <= 24.9 && bmi > 18.5) {
-        interpretation = `Your BMI is ${bmi}, so you have a normal weight.`;
-    } else {
-        interpretation = `Your BMI is ${bmi}, so you are underweight.`;
-    }
+//     if (bmi > 24.9) {
+//         interpretation = `Your BMI is ${bmi}, so you are overweight.`;
+//     } else if (bmi <= 24.9 && bmi > 18.5) {
+//         interpretation = `Your BMI is ${bmi}, so you have a normal weight.`;
+//     } else {
+//         interpretation = `Your BMI is ${bmi}, so you are underweight.`;
+//     }
 
-    return interpretation;
+//     return interpretation;
+// }
+
+// function isYearALeapYear(year) {
+//     if (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)) {
+//         return true;
+//     }
+//     return false;
+// }
+
+// var year = 2000;
+
+// console.log(`${isYearALeapYear(year) ? "Yes" : "No"} leap year.`);
+
+var names = ["Bernice", "Chouetta", "Kenny", "Dany", "Helene"];
+
+var yourName = prompt("Enter your name:");
+
+if (names.includes(yourName)) {
+    alert(`Welcome, ${yourName}!`);
+} else {
+    alert(`Hi! We couldn't find you in our list of invitees.`);
 }
-
-function isYearALeapYear(year) {
-    if (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)) {
-        return true;
-    }
-    return false;
-}
-
-var year = 2000;
-
-console.log(`${isYearALeapYear(year) ? "Yes" : "No"} leap year.`);
