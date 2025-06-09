@@ -1,4 +1,4 @@
-const btn = document.querySelectorAll('button');
+const btn = document.querySelectorAll('.drum');
 
 
 btn.forEach(element => {
@@ -9,3 +9,5 @@ btn.forEach(element => {
 function handleClick(){
     alert('I got clicked!');
 }
+
+
