@@ -19,7 +19,7 @@ function rollDice() {
     img2.setAttribute('src',`./images/dice${rand2}.png`);
 
     if (rand1 > rand2) {
-        refresh.textContent = 'Player 1 wins🚩';
+        refresh.textContent = '🚩Player 1 wins';
     } else if (rand1 < rand2) {
         refresh.textContent = 'Player 2 wins🚩';
     }else{
