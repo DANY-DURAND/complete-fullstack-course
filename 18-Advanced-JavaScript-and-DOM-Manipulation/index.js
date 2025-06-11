@@ -27,11 +27,11 @@ function play(path) {
 document.addEventListener("keydown", (event) => {
 //   alert("Key was pressed!");
 //   console.log(event.key);
-  makeSound(event.key);
+  makeSound(event.key.toLowerCase());
 });
 
 function makeSound(key) {
-  switch (key.toLowerCase()) {
+  switch (key) {
     case "w":
       play("./sounds/tom-1.mp3");
       break;
