@@ -28,14 +28,16 @@ console.log(bellBoy.name);
 // }
 
 // Function Constructor version
-function BellBoy(name, age, hasWorkPermit, languages) {
-    this.name = name;
-    this.age = age;
-    this.hasWorkPermit = hasWorkPermit;
-    this.languages = languages;
-    this.moveLungage = function() {
-        console.log('Moving Suitcases...');
-    };
+class BellBoy {
+    constructor(name, age, hasWorkPermit, languages) {
+        this.name = name;
+        this.age = age;
+        this.hasWorkPermit = hasWorkPermit;
+        this.languages = languages;
+    }
+    moveLungage = function () {
+            console.log('Moving Suitcases...');
+        };
 }
 
 
@@ -46,17 +48,21 @@ console.log(bellBoy1);
 bellBoy1.moveLungage()
 
 
-function HouseKeeper(yearsOfExperience, name,age, hasWorkedForHotel, hasWorkPermit, cleaningRepository){
-    this.yearsOfExperience = yearsOfExperience;
-    this.name = name;
-    this.cleaningRepository = cleaningRepository;
-    this.hasWorkPermit = hasWorkPermit;
-    this.age = age;
-    this.hasWorkedForHotel=hasWorkedForHotel;
+class HouseKeeper {
+    constructor(yearsOfExperience, name, age, hasWorkedForHotel, hasWorkPermit, cleaningRepository) {
+        this.yearsOfExperience = yearsOfExperience;
+        this.name = name;
+        this.cleaningRepository = cleaningRepository;
+        this.hasWorkPermit = hasWorkPermit;
+        this.age = age;
+        this.hasWorkedForHotel = hasWorkedForHotel;
 
-    this.clean = () => {
-        alert('Cleaning in progress...')
+        
     }
+
+    clean = () => {
+            alert('Cleaning in progress...');
+        };
 }
 
 const houseKeeper1 = new HouseKeeper(4, 'Kristina', 24, true, false,['bathroom', 'Lobby', 'bedroom'])
