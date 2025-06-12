@@ -16,6 +16,9 @@ for (let i = 0; i < btn.length; i++) {
     // console.log(this.innerHTML);
     // this.classList.add('clicked');
     makeSound(this.innerHTML);
+
+    buttonAnimation(this.innerHTML)
+
   });
 }
 
@@ -28,6 +31,7 @@ document.addEventListener("keydown", (event) => {
 //   alert("Key was pressed!");
 //   console.log(event.key);
   makeSound(event.key.toLowerCase());
+  buttonAnimation(event.key)
 });
 
 function makeSound(key) {
@@ -56,4 +60,14 @@ function makeSound(key) {
     default:
       console.log(this.innerHTML);
   }
+}
+
+function buttonAnimation(currentKey){
+  var activeButton = document.querySelector(`.${currentKey}`);
+  activeButton.classList.add('pressed');
+
+  setTimeout(()=>{
+    activeButton.classList.remove('pressed')
+  }, 100);
+
 }
