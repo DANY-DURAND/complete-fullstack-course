@@ -66,3 +66,54 @@ class HouseKeeper {
 }
 
 const houseKeeper1 = new HouseKeeper(4, 'Kristina', 24, true, false,['bathroom', 'Lobby', 'bedroom'])
+
+
+function anotherAddEventListener(typeOfEvent, callback){
+
+    var eventThatHappened = {
+        eventType: 'keydown',
+        key: "p",
+        durationOfKeypress: 2
+    }
+
+    if (eventThatHappened.eventType === typeOfEvent) {
+        callback(eventThatHappened);
+    }
+
+}
+
+anotherAddEventListener( 'keydown', (event)=>{
+    console.log(event);
+    
+})
+
+
+// Another example
+
+function myDisplayer(some){
+    console.log(some);
+}
+
+function myCalculator(num1, num2, myCallBack){
+    myCallBack(num1 + num2);
+}
+
+myCalculator(3,5,myDisplayer)
+
+// Another example
+
+const myNumbers = [4,1,-20,-7,5,9,-6];
+
+const posNumbers= removeNeg(myNumbers, (x)=>x>=0);
+
+myDisplayer(posNumbers);
+
+function removeNeg(numbers, callback) {
+    const myArr = [];
+    for(const x of numbers){
+        if (callback(x)) {
+            myArr.push(x)
+        }
+    }
+    return myArr;
+}
