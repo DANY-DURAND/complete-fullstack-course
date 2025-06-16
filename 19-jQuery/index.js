@@ -47,4 +47,5 @@ $(document).ready(function(){
     $('h1').prepend('<button>New</button>');
     $('h1').append('<button>New</button>');
     
+    $('button').remove();
 })
