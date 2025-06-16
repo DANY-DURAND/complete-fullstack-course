@@ -4,14 +4,14 @@ $(document).ready(function(){
 
     // Adding Classes for separation for concerns 
     $('h1').addClass("big-title");
-    $('h1').removeClass("big-title");
+    // $('h1').removeClass("big-title");
     
 
-    $('button').css('display', 'block');
-    $('button').css('margin', '1rem');
-    console.log(
-        $('button').css('margin')
-    );
+    // $('button').css('display', 'block');
+    // $('button').css('margin', '1rem');
+    // console.log(
+    //     $('button').css('margin')
+    // );
 
     // Text Maninpulation
     $('h1').text("Bye");
@@ -25,5 +25,17 @@ $(document).ready(function(){
     console.log($('button').attr("style"));
     $('a').attr('href', 'https://www.yahoo.com')
 
+    $('h1').click(function (e) { 
+        $('h1').css('color', 'purple');
+    });
+
+    $('button').click(function () { 
+        $('h1').css('color', 'purple');
+        
+    });
+
+    $('body').keydown(function (e) { 
+        $('h1').text(e.key);
+    });
 
 })
