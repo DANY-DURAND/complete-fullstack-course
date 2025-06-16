@@ -38,4 +38,13 @@ $(document).ready(function(){
         $('h1').text(e.key);
     });
 
+    $('h1').on('mouseover', function () {
+        $('h1').css('color', 'blue');
+    });
+
+    $('h1').before('<button>New</button>');
+    $('h1').after('<button>New</button>');
+    $('h1').prepend('<button>New</button>');
+    $('h1').append('<button>New</button>');
+    
 })
