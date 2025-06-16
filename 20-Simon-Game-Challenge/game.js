@@ -19,14 +19,32 @@ function nextSequence() {
 
     $('#'+randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
 
-    const audio = new Audio(`sounds/${randomChosenColour}`);
-    audio.play();
+    playSound(randomChosenColour);
 
     $('.btn').click(function () { 
         const userChoosenColour = $(this).attr('id');
         console.log(userChoosenColour);
 
         userClickedPattern.push(userChoosenColour);
+
+        playSound(userChoosenColour);
     });
 
+}
+function playSound(name) {
+    const audio = new Audio(`sounds/${name}.mp3`);
+    audio.play();
+}
+
+
+function animatePress(currentColour) {
+    $(`#${currentColour}`).click(function(){
+
+        $(this).addClass('pressed');
+        
+        setTimeout(() => {
+            $(this).removeClass('pressed');
+        }, 100);
+
+    });
 }
