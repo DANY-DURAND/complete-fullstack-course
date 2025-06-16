@@ -4,6 +4,8 @@
 //     $('h1')
 // });
 
+const userClickedPattern = [];
+
 const buttonColours = ["red", "blue", "green", "yellow"];
 const gamePattern = [];
 
@@ -19,5 +21,12 @@ function nextSequence() {
 
     const audio = new Audio(`sounds/${randomChosenColour}`);
     audio.play();
-}
 
+    $('.btn').click(function () { 
+        const userChoosenColour = $(this).attr('id');
+        console.log(userChoosenColour);
+
+        userClickedPattern.push(userChoosenColour);
+    });
+
+}
