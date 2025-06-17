@@ -100,8 +100,20 @@ function checkAnswer(currentLevel) {
         console.log('Wrong');
         playSound('wrong');
 
-        $("#level-title").text("Level " + level);
+        $("body").addClass('game-over');
 
-        
+        setTimeout(() => {
+            $("body").removeClass('game-over');
+        }, 200);
+
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        startOver();
     }
+}
+
+function startOver() {
+    level = 0;
+    gamePattern = 0;
+    started = false;
 }
