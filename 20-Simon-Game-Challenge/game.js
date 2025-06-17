@@ -6,9 +6,9 @@
 
 
 const buttonColours = ["red", "blue", "green", "yellow"];
-const gamePattern = [];
+var gamePattern = [];
 
-const userClickedPattern = [];
+var userClickedPattern = [];
 
 
 //You'll need a way to keep track of whether if the game has started or not, so you only call nextSequence() on the first keypress.
@@ -37,9 +37,15 @@ $('.btn').click(function () {
     
     playSound(userChoosenColour);
     animatePress(userChoosenColour)
+
+    //Call checkAnswer() after a user has clicked and chosen their answer, passing in the index of the last answer in the user's sequence.
+
+    checkAnswer(userClickedPattern.length - 1);
 });
 
 function nextSequence() {
+
+    userClickedPattern = [];
 
     // Inside nextSequence(), increase the level by 1 every time nextSequence() is called.
     level++; 
@@ -73,3 +79,29 @@ function animatePress(currentColour) {
 }
 
 
+function checkAnswer(currentLevel) {
+    if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) {
+        var count = 0;
+        for (let i = 0; i < gamePattern.length; i++) {
+            
+            if (gamePattern[i] ===userClickedPattern[i] ) {
+                count++;
+            }
+        }
+        
+        if (count === gamePattern.length) {
+            console.log('Success');
+            setTimeout(() => {
+                nextSequence()
+            }, 1000);
+        }   
+        
+    }else{
+        console.log('Wrong');
+        playSound('wrong');
+
+        $("#level-title").text("Level " + level);
+
+        
+    }
+}
