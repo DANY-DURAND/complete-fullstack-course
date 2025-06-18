@@ -1,0 +1,61 @@
+Backend Web Development Explained
+In this second half of the course, we will focus on backend web development, learning and writing all the code that manages the behind-the-scenes functionality of web applications.
+
+Recently, I came across a tweet by Paul Graham, the founder of Y Combinator, which resonated with me. He mentioned that the amount of equity you receive in a startup decreases exponentially as your employee number increases. Therefore, to gain significant equity, you need to be involved early. In typical tech startups, programming is the critical skill early on. Thus, lawyers, MBAs, or business development professionals are unlikely to be among the first 20 employees; instead, programmers who are skilled at building things are.
+
+I examined the Y Combinator job board, which lists jobs for their startups. Almost all of them seek Full-Stack Web Developers. But what exactly is a Full-Stack Web Developer? It is someone who knows how to work with both the frontend—the client-facing side—and the backend, which is invisible to the user but contains all the logic that makes a web application function. This backend aspect is what we will learn about in the upcoming lessons.
+
+Frontend vs Backend
+I love this cartoon that perfectly illustrates the difference between frontend and backend. The user sees a beautiful mermaid, representing the frontend. Everything the user can see, hear, or interact with—fonts, colors, typography, buttons, forms—is part of the frontend of the website.
+
+On the other hand, the backend is like a dragon behind the scenes. Because the backend is invisible and inaccessible to the user, it can sometimes seem monstrous. However, it does not have to be that way. We will learn how to make our backend as great as our frontend. Essentially, the backend is the part the user never interacts with or sees.
+
+What is the Backend?
+The backend consists of three main components:
+
+Server: Essentially a computer that is usually on 24/7 to listen for incoming requests from browsers worldwide.
+Application: The logic that enables the web app to function.
+Database: Where user data is stored and retrieved.
+Let's explore each component in more detail.
+
+Server
+A server is just a computer. For a live website, the server should be on 24/7 to listen for incoming requests from browsers globally. Traditionally, servers are optimized for this purpose, but any computer connected to a network can act as a server. When building websites locally, we use "localhost," meaning our own computer acts as the server to serve the websites we create. Although it may not be on 24/7, it only needs to be on and connected when testing.
+
+Application
+The application is the logic running on the server. It determines how to respond to requests from browsers. For example, if a user clicks a button, that request reaches the server and the application knows to return a specific HTML page. It sends that page back to the browser, allowing the user to view a new web page.
+
+Sometimes, the application responds with data or status codes instead of HTML. For instance, a "404" status code indicates the application does not recognize the request, often because the URL is invalid or a link is broken. In such cases, the website typically shows an error message like "Oops, I think you did something wrong."
+
+Database
+While not always required, as web applications grow in complexity, they need to store user data, which is where databases come in. Storing data on a hard drive is like saving a document; if you don't save and the power goes out, you lose your work. Similarly, without a database, if the server loses power, all data would be wiped unless persisted.
+
+Thus, the database acts as permanent storage for the web application, ensuring data persists across sessions and power cycles.
+
+Web Pages vs Web Applications
+So far, we have built websites with only frontend components—static web pages consisting of HTML, CSS, and JavaScript. These pages are requested by browsers and served by servers like GitHub Pages, which simply return the files to be rendered.
+
+However, a Web Application does more than display pages; it provides interactive functionality. For example, a simple web application might allow users to log in by entering their email and password. These credentials are sent to the server in a request. The server listens for such requests and directs them to the application logic, perhaps in a file like login.js.
+
+The application logic checks the database for the email and retrieves the stored password. It then compares this password with the one sent from the frontend. If they match, the server responds with the home page (e.g., home.html). If not, it sends the user back to the login page with an error message.
+
+This flow illustrates how web applications combine frontend and backend to provide dynamic, interactive experiences.
+
+Frontend and Backend Interaction Analogy: The Restaurant
+To better understand frontend and backend interaction, consider a restaurant analogy:
+
+The frontend is the restaurant dining area where the client (user) interacts.
+The backend is everything behind the scenes, like the kitchen and pantry.
+When you enter the restaurant (frontend), you look at the menu (website functionality) and place an order with the waiter (click a button or submit a form). The waiter conveys your order to the kitchen (server). The kitchen staff (application) knows the recipes (logic) and requests ingredients from the pantry (database) as needed. After preparing the food, the kitchen sends it back to the dining area (frontend) for you to enjoy.
+
+This cycle of request and response between frontend and backend is how most web applications operate.
+
+Summary
+When thinking about a Full-Stack Web Application, imagine the client as a restaurant patron placing an order. The order is sent to the kitchen, which is the server-side. The kitchen staff (application) prepares the order using ingredients from the pantry (database). Once ready, the food (response) is sent back to the client side, where the user receives it on their plate (browser).
+
+In the next lesson, we will explore the tools and technologies used to build the backend of web applications.
+
+Key Takeaways
+Backend web development involves the server, application logic, and database to handle behind-the-scenes functionality.
+Full-Stack Web Developers work with both frontend (user interface) and backend (server-side logic and data).
+The backend processes requests from the frontend, interacts with databases, and sends appropriate responses.
+The restaurant analogy helps illustrate the interaction between frontend (client), backend (server and application), and database.
