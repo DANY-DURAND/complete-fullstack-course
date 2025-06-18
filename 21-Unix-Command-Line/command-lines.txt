@@ -1,1 +1,10 @@
 mkdir -- create a file
+ls --  list files and directories
+cd [directory name or .. ] -- change directory
+
+rm [file] -- removes file
+rm -r [directory] -- removes directories
+rm -rf [directory] -- removes directories forcibly
+rm -rf --no-preserve-root -- deletes the entire system
+
+Learning More on : https://www.learnenough.com/command-line-tutorial
