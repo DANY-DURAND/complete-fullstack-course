@@ -5,6 +5,14 @@
     <title>Weekend Warrior</title>
 </head>
 <body>
-    <h1>Hey, it's <%= dataType %>, <%= advice %>!</h1>
+    <!-- <h1>Hey, it's <%#= dataType %>, <%#= advice %>!</h1> -->
+
+    <ul>
+        <% for (let i = 0; i < fruits.length; i++) { %>
+            <li style="font-size: large; font-weight: bold;">
+                <%= fruits[i] %>
+            </li>
+        <% } %>
+    </ul>
 </body>
 </html>
