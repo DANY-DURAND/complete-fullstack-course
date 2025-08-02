@@ -1,0 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+     justify-content: center;
+}
+
+
+main{
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
