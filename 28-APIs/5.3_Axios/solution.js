@@ -31,7 +31,7 @@ app.post("/", async (req, res) => {
       `https://bored-api.appbrewery.com/filter?type=${type}&participants=${participants}`
     );
     const result = response.data;
-    console.log(result);
+    console.log(result); 
     res.render("solution.ejs", {
       data: result[Math.floor(Math.random() * result.length)],
     });
