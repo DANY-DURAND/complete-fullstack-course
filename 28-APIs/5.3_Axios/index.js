@@ -38,7 +38,9 @@ app.post("/", async (req, res) => {
     );
     const result = response.data;
     console.log(result);
-    const randomNum = Math.random(Math.floor() * result.lenght)
+    const randomNum = Math.floor(Math.random() * result.length);
+    // console.log(randomNum);
+    
     res.render("index.ejs",{
       data: result[randomNum],
     });
