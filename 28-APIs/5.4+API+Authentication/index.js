@@ -8,10 +8,10 @@ const API_URL = "https://secrets-api.appbrewery.com/";
 dotenv.config();
 
 //TODO 1: Fill in your values for the 3 types of auth.
-const yourUsername = process.USERNAME;
-const yourPassword = process.PASSWORD;
-const yourAPIKey = process.API_KEY;
-const yourBearerToken = process.TOKEN;
+const yourUsername = process.env.USERNAME;
+const yourPassword = process.env.PASSWORD;
+const yourAPIKey = process.env.API_KEY;
+const yourBearerToken = process.env.TOKEN;
 
 app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
